@@ -2379,7 +2379,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396000639}
-  m_LocalRotation: {x: -0.12964495, y: -0.86051273, z: 0.41123635, w: -0.2712833}
+  m_LocalRotation: {x: -0.12964496, y: -0.8605128, z: 0.41123638, w: -0.27128333}
   m_LocalPosition: {x: -69.18551, y: 51.676147, z: 84.95801}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10876,8 +10876,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1457645484}
+  - component: {fileID: 1457645485}
   m_Layer: 0
-  m_Name: q
+  m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10908,6 +10909,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1457645485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457645483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca79596951b24f4b9776ae7424065d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1474274618
 Prefab:
   m_ObjectHideFlags: 0
@@ -12858,6 +12870,50 @@ Transform:
   m_PrefabParentObject: {fileID: 4520729986757646, guid: 0740d2a6000a04ea1ac2cd532565c30f,
     type: 2}
   m_PrefabInternal: {fileID: 1761268378}
+--- !u!1 &1764357790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1764357792}
+  - component: {fileID: 1764357791}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1764357791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764357790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88067583d0f034d65871a73558ba31b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 4402539577494672, guid: cb3573612a6dd45d7aa3c8d751e6dee1,
+    type: 2}
+  timeBetweenWaves: 5
+  spawnPoint: {fileID: 734920038}
+--- !u!4 &1764357792
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764357790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.24, y: 1, z: 10.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1778530245
 Prefab:
   m_ObjectHideFlags: 0

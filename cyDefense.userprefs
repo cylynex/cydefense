@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaveSpawner.cs">
     <Files>
-      <File FileName="Assets/Scripts/Waypoints.cs" Line="12" Column="47" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Waypoints.cs" Line="10" Column="31" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="32" Column="57" />
+      <File FileName="Assets/Scripts/WaveSpawner.cs" Line="7" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
