@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     public float minY = 10f;
     public float maxY = 80f;
 
-    [Header("Camerea")]
+    [Header("Camera")]
     public Vector2 zoomRange = new Vector2(-50, 100);
     public float CurrentZoom = 0;
     public float ZoomSpeed = 1;
