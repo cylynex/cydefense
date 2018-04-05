@@ -6,9 +6,11 @@ public class Node : MonoBehaviour {
 
     [Header("Attributes")]
     public Color hoverColor;
+    public Vector3 positionOffset;
 
     private Renderer rend;
     private Color startColor;
+    private GameObject turret;
 
     void Start() {
         rend = GetComponent<Renderer>();
@@ -22,5 +24,20 @@ public class Node : MonoBehaviour {
 
     void OnMouseExit() {
         rend.material.color = startColor;
+    }
+
+
+    // Click node
+    void OnMouseDown() {
+        if (turret != null) {
+            // Turret is already there
+            Debug.Log("space already occupied");
+            return;
+        }
+
+        // Build a Turret
+        GameObject turreToBuild = BuildManager.instance.GetTurretToBuild();
+        turret = (GameObject)Instantiate(turreToBuild, transform.position + positionOffset, transform.rotation);
+
     }
 }
