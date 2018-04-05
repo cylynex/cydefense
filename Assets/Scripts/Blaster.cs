@@ -86,7 +86,7 @@ public class Blaster : MonoBehaviour {
     void Shoot() {
         GameObject bulletGO = (GameObject)Instantiate(level1BulletPrefab, firePoint.position, firePoint.rotation);
         BlasterBullet bullet = bulletGO.GetComponent<BlasterBullet>();
-        if (bullet ! = null) {
+        if (bullet != null) {
             bullet.Seek(target);
         }
     }
