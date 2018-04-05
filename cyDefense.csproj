@@ -327,6 +327,7 @@
     <Compile Include="Assets\Scripts\Blaster.cs" />
     <Compile Include="Assets\Scripts\BlasterBullet.cs" />
     <Compile Include="Assets\Scripts\BuildManager.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />

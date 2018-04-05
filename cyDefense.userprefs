@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../basebuilder/basebuilder/Assets/Scripts/MouseController.cs">
     <Files>
       <File FileName="Assets/Scripts/Waypoints.cs" Line="10" Column="31" />
       <File FileName="Assets/Scripts/WaveSpawner.cs" Line="13" Column="11" />
       <File FileName="Assets/Scripts/Blaster.cs" Line="40" Column="70" />
       <File FileName="Assets/Scripts/BlasterBullet.cs" Line="45" Column="39" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="28" Column="67" />
-      <File FileName="Assets/Scripts/Node.cs" Line="38" Column="9" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Node.cs" Line="40" Column="91" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="20" Column="46" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="11" Column="77" />
+      <File FileName="../../basebuilder/basebuilder/Assets/Scripts/MouseController.cs" Line="147" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
