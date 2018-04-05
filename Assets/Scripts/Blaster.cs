@@ -5,9 +5,19 @@ using UnityEngine;
 public class Blaster : MonoBehaviour {
 
     private Transform target;
+
+    [Header("Attributes")]
     public float range = 15f;
-    public string enemyTag = "Enemy";
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
+
+    [Header("Setup Fields Only")]
     public float turnSpeed = 10f;
+    public string enemyTag = "Enemy";
+
+    public GameObject level1BulletPrefab;
+    public Transform firePoint;
+
 
     // rotation part
     public Transform partToRotate;
@@ -28,6 +38,15 @@ public class Blaster : MonoBehaviour {
         Quaternion lookRotation = Quaternion.LookRotation(directonToFace);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        // Fire Control
+        if (fireCountdown <= 0) {
+            Shoot();
+            fireCountdown = 1 / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+
     }
 	
 
@@ -60,5 +79,15 @@ public class Blaster : MonoBehaviour {
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+
+    // SHOOT!
+    void Shoot() {
+        GameObject bulletGO = (GameObject)Instantiate(level1BulletPrefab, firePoint.position, firePoint.rotation);
+        BlasterBullet bullet = bulletGO.GetComponent<BlasterBullet>();
+        if (bullet ! = null) {
+            bullet.Seek(target);
+        }
     }
 }

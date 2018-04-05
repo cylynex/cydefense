@@ -1545,6 +1545,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114659659179491760, guid: 1b69d37adc09a4bfcb53f1592b3950e5,
+        type: 2}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1357783601}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b69d37adc09a4bfcb53f1592b3950e5, type: 2}
   m_IsPrefabParent: 0
@@ -10102,6 +10107,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4971786153149088, guid: 594aff5617ed94c0f9d38f8efb419be5,
     type: 2}
   m_PrefabInternal: {fileID: 1353716436}
+--- !u!4 &1357783601 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4613855428808386, guid: 1b69d37adc09a4bfcb53f1592b3950e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 275693734}
 --- !u!1001 &1360099461
 Prefab:
   m_ObjectHideFlags: 0
