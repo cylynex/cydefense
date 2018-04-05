@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Blaster : MonoBehaviour {
 
-    public Transform target;
+    private Transform target;
     public float range = 15f;
     public string enemyTag = "Enemy";
+    public float turnSpeed = 10f;
+
+    // rotation part
+    public Transform partToRotate;
 
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -18,6 +22,12 @@ public class Blaster : MonoBehaviour {
         if (target == null) {
             return;
         }
+
+        // END - SOURCE -> to get the direction we should face and lock target
+        Vector3 directonToFace = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(directonToFace);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 	
 

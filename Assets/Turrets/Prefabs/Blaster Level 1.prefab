@@ -83,6 +83,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4109259028807412}
+  - component: {fileID: 114659659179491760}
   m_Layer: 0
   m_Name: Blaster Level 1
   m_TagString: Untagged
@@ -146,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493602122324678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 0.5, z: 0.483}
+  m_LocalPosition: {x: -64.8, y: 0.5, z: 29.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4365221184248538}
@@ -160,14 +161,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034086732574948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.047, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4953002316470102}
   m_Father: {fileID: 4109259028807412}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4207526984458962
 Transform:
   m_ObjectHideFlags: 1
@@ -213,9 +214,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1956828808030404}
-  m_LocalRotation: {x: 0.50000006, y: 0.5, z: -0.49999994, w: -0.5}
-  m_LocalPosition: {x: -3.1125445, y: 1.2123214, z: 0}
-  m_LocalScale: {x: 0.04413966, y: 0.04413966, z: 0.04413966}
+  m_LocalRotation: {x: 0.000000059604645, y: -0, z: -0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 1.2123214, z: 3.1125445}
+  m_LocalScale: {x: 0.044139665, y: 0.04413967, z: 0.044139665}
   m_Children: []
   m_Father: {fileID: 4201782144919440}
   m_RootOrder: 0
@@ -390,3 +391,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483297638210206}
   m_Mesh: {fileID: 4300002, guid: e4b06f6c9f824448196e4c6669773ccc, type: 3}
+--- !u!114 &114659659179491760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493602122324678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ecf1d03861b4721bda81862fdc04a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 15
+  enemyTag: Enemy
+  turnSpeed: 10
+  partToRotate: {fileID: 4201782144919440}
