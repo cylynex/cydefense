@@ -306,7 +306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TWO BROTHERS
+  m_Text: train to zone
 --- !u!222 &49345943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5474,7 +5474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ecf1d03861b4721bda81862fdc04a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 15
+  enemyTag: Enemy
 --- !u!1001 &803963183
 Prefab:
   m_ObjectHideFlags: 0

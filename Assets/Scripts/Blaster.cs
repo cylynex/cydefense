@@ -4,18 +4,46 @@ using UnityEngine;
 
 public class Blaster : MonoBehaviour {
 
-    private Transform target;
+    public Transform target;
     public float range = 15f;
+    public string enemyTag = "Enemy";
 
-	// Use this for initialization
 	void Start () {
-		
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
+
+
+    void Update() {
+        // if no target, just exit
+        if (target == null) {
+            return;
+        }
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    void UpdateTarget() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
+        // shortest distance / nearest enemy
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+
+        foreach (GameObject enemy in enemies) {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < shortestDistance) {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+
+        if (nearestEnemy != null && shortestDistance <= range)  {
+            // set target
+            target = nearestEnemy.transform;
+
+        } else {
+            target = null;
+        }
+    }
 
 
     // gizmos to see range etc

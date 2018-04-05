@@ -44,7 +44,9 @@ public class WaveSpawner : MonoBehaviour {
 
     // Spawn mob
     void SpawnEnemy() {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Transform thisEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        thisEnemy.transform.SetParent(this.transform,true);
+
     }
 
 }
