@@ -14,20 +14,28 @@ public class RocketLauncher : MonoBehaviour {
     private float fireCountDown = 0f;
 
     public GameObject level1RocketPrefab;
-    public Transform firePoint;
 
+    [Header("Internal")]
+    public Transform firePoint;
     public Transform partToRotate;
+    private Animator anim;
 
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 1f);
+        anim = GetComponent<Animator>();
 	}
 	
 	void Update () {
 		
         // Do nothing if no target
         if (target == null) {
+            // Engage idle animation
+            anim.SetBool("isAttacking", false);
             return;
         }
+
+        // Disengage idle animation
+        anim.SetBool("isAttacking", true);
 
         // Face target
         Vector3 directionToFace = target.position - transform.position;
