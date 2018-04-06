@@ -5,8 +5,6 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour {
 
     [Header("Attributes")]
-    //public GameObject standardTurretPrefab;
-    //public GameObject rocketLauncherPrefab;
     public GameObject[] turretPrefabs;
 
     [Header("Internal")]
