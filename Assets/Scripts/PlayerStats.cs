@@ -43,12 +43,15 @@ public class PlayerStats : MonoBehaviour {
 
     public void SubtractLife() {
         lives--;
-        SetPlayerStat(livesUIObject);
 
         // check for life 0
         if (lives <= 0) {
             Debug.Log("game over");
+            lives = 0;
         }
+
+        SetPlayerStat(livesUIObject);
+
     }
 
 
