@@ -12,10 +12,12 @@ public class PlayerStats : MonoBehaviour {
     [Header("Start Values")]
     public int startMoney = 500;
     public Text moneyText;
-
     public int startLives = 20;
     public Text livesUI;
     public GameObject livesUIObject;
+
+    [Header("Reference")]
+    public static int round;
 
     void Start() {
         money = startMoney;
@@ -23,6 +25,8 @@ public class PlayerStats : MonoBehaviour {
 
         lives = startLives;
         livesUI.text = lives.ToString();
+
+        round = 0;
     }
 
     void Update() {

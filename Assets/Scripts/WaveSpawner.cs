@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour {
     public Transform enemyPrefab;
     public float timeBetweenWaves = 5.9f;
     public Transform spawnPoint;
+    public Text waveText;
 
     // Time to spawn first wave
     private float countdown = 3f;
@@ -36,6 +37,9 @@ public class WaveSpawner : MonoBehaviour {
     IEnumerator SpawnWave() {
 
         waveIndex++;
+
+        PlayerStats.round++;
+        waveText.text = PlayerStats.round.ToString();
 
         for (int i = 0; i < waveIndex; i++) {
             SpawnEnemy();
