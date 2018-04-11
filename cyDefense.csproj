@@ -326,9 +326,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\RTSCamera.cs" />
     <Compile Include="Assets\Scripts\RTSCamera1.cs" />
