@@ -1,18 +1,22 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../nadesvsbadgers/Nades Vs Badgers/Assets/Scripts/Attacker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Turrets/Laser/Laser.cs">
     <Files>
-      <File FileName="Assets/Scripts/Node.cs" Line="4" Column="32" NotebookId="1" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="7" Column="27" NotebookId="1" />
-      <File FileName="Assets/Scripts/Shop.cs" Line="11" Column="9" NotebookId="1" />
-      <File FileName="Assets/Turrets/Rocket Launcher 1/RocketLauncher.cs" Line="33" Column="29" NotebookId="1" />
-      <File FileName="Assets/Turrets/Rocket Launcher 1/Missile1.cs" Line="42" Column="33" NotebookId="1" />
-      <File FileName="../../nadesvsbadgers/Nades Vs Badgers/Assets/Scripts/Attacker.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Node.cs" Line="63" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="50" Column="96" NotebookId="1" />
+      <File FileName="Assets/Scripts/Shop.cs" Line="24" Column="49" NotebookId="1" />
+      <File FileName="Assets/Scripts/TurretBlueprint.cs" Line="11" Column="5" NotebookId="1" />
+      <File FileName="Assets/Scripts/WaveSpawner.cs" Line="32" Column="28" NotebookId="1" />
+      <File FileName="Assets/Scripts/PlayerStats.cs" Line="52" Column="43" NotebookId="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="84" Column="26" NotebookId="1" />
+      <File FileName="Assets/Turrets/Rocket Launcher 1/RocketLauncher.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Turrets/Laser/Laser.cs" Line="13" Column="26" NotebookId="1" />
     </Files>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="2759" Y="60" Width="1033" Height="1459">
+      <FloatingWindow WindowId="1" X="2786" Y="27" Width="1033" Height="1459">
         <Files>
-          <File FileName="Assets/Turrets/Blaster Level 1/BlasterBullet.cs" Line="16" Column="6" />
+          <File FileName="Assets/Turrets/Blaster Level 1/BlasterBullet.cs" Line="29" Column="1" />
           <File FileName="Assets/Turrets/Blaster Level 1/Blaster.cs" Line="77" Column="1" />
+          <File FileName="Assets/Turrets/Rocket Launcher 1/Missile1.cs" Line="44" Column="23" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>

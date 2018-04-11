@@ -6,6 +6,8 @@ public class BlasterBullet : MonoBehaviour {
 
     [Header("Attributes")]
     public float speed = 70f;
+    public int damage = 10;
+    public int explosionRadius = 0;
 
     [Header("Internal Only")]
     private Transform target;
@@ -25,7 +27,6 @@ public class BlasterBullet : MonoBehaviour {
             return;
         }
 
-        Debug.Log("starting move calcs");
         // Get direction of bullet to go.
         Vector3 direction = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
@@ -44,6 +45,13 @@ public class BlasterBullet : MonoBehaviour {
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectInstance, 2.0f);
         Destroy(gameObject);
-        Destroy(target.gameObject);
+        Damage(target.transform);
     }
+
+    void Damage(Transform enemy) {
+        Enemy e = enemy.GetComponent<Enemy>();
+        e.TakeDamage(damage);
+        Debug.Log("enemy: " + e);
+    }
+
 }

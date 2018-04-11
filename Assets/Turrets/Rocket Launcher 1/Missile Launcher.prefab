@@ -346,11 +346,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 15
+  range: 30
   fireRate: 0.4
-  turnSpeed: 5
+  turnSpeed: 10
   enemyTag: Enemy
-  level1RocketPrefab: {fileID: 1247500495285928, guid: dfef04a9d346447a5b6b4a2a9e68b049,
+  level1RocketPrefab: {fileID: 1039142080057248, guid: 007c6c0cf6c374d99952135b1b6d80d5,
     type: 2}
   firePoint: {fileID: 4507747059196140}
   partToRotate: {fileID: 4965748045257210}

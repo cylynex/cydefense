@@ -7,11 +7,13 @@ public class Node : MonoBehaviour {
 
     [Header("Attributes")]
     public Color hoverColor;
+    public Color hoverColorBad;
     public Vector3 positionOffset;
 
     private Renderer rend;
     private Color startColor;
-    private GameObject turret;
+    [Header("Optional")]
+    public GameObject turret;
 
     BuildManager buildManager;
 
@@ -21,13 +23,24 @@ public class Node : MonoBehaviour {
         buildManager = BuildManager.instance;
     }
 
+
 	// hover animation
     void OnMouseEnter() {
+        Debug.Log("nouseover");
         if (EventSystem.current.IsPointerOverGameObject()) {
             // Already a GO there.
             return;
         }
-        rend.material.color = hoverColor;
+
+        if (!buildManager.CanBuild)
+            return;
+
+        if (PlayerStats.money < buildManager.turretToBuild.cost) {
+            rend.material.color = hoverColorBad;
+        } else {
+            rend.material.color = hoverColor;
+        }
+
     }
 
     void OnMouseExit() {
@@ -37,21 +50,24 @@ public class Node : MonoBehaviour {
 
     // Click node
     void OnMouseDown() {
-
-        if (buildManager.GetTurretToBuild() == null) {
-            Debug.Log("cant build without picking a turret");
+        if (EventSystem.current.IsPointerOverGameObject())
             return;
-        }
+
+        if (!buildManager.CanBuild)
+            return;
 
         if (turret != null) {
             // Turret is already there
-            Debug.Log("space already occupied");
             return;
         }
 
         // Build a Turret
-        GameObject turreToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turreToBuild, transform.position + positionOffset, transform.rotation);
+        buildManager.BuildTurretOn(this);
 
+    }
+
+
+    public Vector3 GetBuildPosition() {
+        return transform.position + positionOffset;
     }
 }

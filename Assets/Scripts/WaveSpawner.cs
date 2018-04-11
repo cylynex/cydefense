@@ -27,7 +27,9 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         countdown -= Time.deltaTime;
-        countdownTimerLabel.text = Mathf.Floor(countdown + 1).ToString();
+        //countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        //countdownTimerLabel.text = Mathf.Floor(countdown + 1).ToString();
+        countdownTimerLabel.text = string.Format("{0:00.00}", countdown);
     }
 
     // Start next wave

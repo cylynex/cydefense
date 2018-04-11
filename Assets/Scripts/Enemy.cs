@@ -5,17 +5,27 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [Header("Attributes")]
-    public float speed = 5f;
+    public float startSpeed = 5f;
+    public float speed;
     public float turnSpeed = 25f;
+    public float startHitPoints = 100f;
+    public float hitPoints;
+    public int moneyGain = 10;
+
+    public GameObject deathEffect;
 
     private Transform target;
     private int wayPointIndex = 0;
     private Utility utility;
+    private PlayerStats playerstats;
+    private bool isSlowed = false;
 
 	// Use this for initialization
 	void Start () {
         target = Waypoints.points[0];
-        //utility = new Utility();
+        playerstats = FindObjectOfType<PlayerStats>();
+        speed = startSpeed;
+        hitPoints = startHitPoints;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +44,8 @@ public class Enemy : MonoBehaviour {
         if (Vector3.Distance(transform.position, target.position) <= 0.2f) {
             GetNextWaypoint();
         }
+
+        speed = startSpeed;
 	}
 
 
@@ -42,12 +54,47 @@ public class Enemy : MonoBehaviour {
         if (wayPointIndex >= Waypoints.points.Length - 1) {
             // got to the end
             Destroy(gameObject);
+
+            // Take a player point (abstract method using object) - DO NOT DELETE reference item
+            // PlayerStats.lives--;
+            // playerstats.SetPlayerStat(playerstats.livesUIObject);
+
+            // Update lives / check for end (contained)
+            playerstats.SubtractLife();
+
             return;
+
         } else {
             // go to next WP
             wayPointIndex++;
             target = Waypoints.points[wayPointIndex];
 
         }
+    }
+
+
+    // Hurt enemy
+    public void TakeDamage(float damage) {
+        hitPoints -= damage;
+        if (hitPoints <= 0) {
+            Die();
+        }
+    }
+
+
+    // Slow Enemy
+    public void Slow(float slowAmount) {
+        speed = startSpeed * (1f - slowAmount);
+    }
+
+
+    void Die() {
+        PlayerStats.money += moneyGain;
+        playerstats.UpdateMoney();
+
+        Destroy(gameObject);
+        GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 2.0f); 
+
     }
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class Missile1 : MonoBehaviour {
 
     [Header("Attributes")]
-    public float speed = 35f;
+    public float speed = 30f;
+    public float explosionRadius = 0f;
+    public int damage = 50;
 
     [Header("Internal Only")]
     private Transform target;
@@ -28,6 +30,7 @@ public class Missile1 : MonoBehaviour {
 
         // Didn't hit, move along
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target);
 
 	}
 
@@ -39,10 +42,41 @@ public class Missile1 : MonoBehaviour {
 
     // Hit
     void HitTarget() {
-        Debug.Log("direct hit");
-        //GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        //Destroy(effectInstance, 3.0f); 
+        GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectInstance, 5.0f); 
+
+        // Explosion
+        if (explosionRadius > 0f) {
+            Explode();
+        } else {
+            Damage(target);
+        }
+
         Destroy(gameObject);
-        Destroy(target.gameObject);
+    }
+
+    // AE Damage
+    void Explode() {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius); 
+        foreach(Collider collider in colliders) {
+            if (collider.tag == "Enemy") {
+                // Its an enemy - destroy it
+                Damage(collider.transform);
+            } else {
+                // Not an enemy
+            }
+        }
+
+    }
+
+    void Damage(Transform enemy) {
+        Enemy e = enemy.GetComponent<Enemy>();
+        e.TakeDamage(damage);
+    }
+
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }

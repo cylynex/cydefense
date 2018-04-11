@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 95746439533951266}
   m_Layer: 0
   m_Name: Air Drone blend
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4004832821282236}
   - component: {fileID: 114582710266940324}
+  - component: {fileID: 65347506683734152}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Enemy
@@ -203,7 +204,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599501181392622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.192917, y: 4.19, z: 34.612984}
+  m_LocalPosition: {x: -59.57, y: 1, z: 31.29}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4659575213803388}
@@ -721,6 +722,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376727669819440}
   m_Mesh: {fileID: 4300006, guid: 08f8c68a09ea24517b5c3d98a9214b83, type: 3}
+--- !u!65 &65347506683734152
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1599501181392622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2919807, y: 1.7951173, z: 4.3676233}
+  m_Center: {x: -0.017180443, y: 2.5123491, z: -0.87626696}
 --- !u!95 &95746439533951266
 Animator:
   serializedVersion: 3
@@ -751,3 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   turnSpeed: 7
+  hitPoints: 100
+  moneyGain: 10
+  deathEffect: {fileID: 1903933302884204, guid: c9c6bbd5eb2cb40f29996b9b4d057179,
+    type: 2}
