@@ -131,7 +131,7 @@ public class Laser : MonoBehaviour {
 
         // get direction to face the particles back at laser
         Vector3 dir = firePoint.position - target.position;
-        impactEffect.transform.position = target.position + dir.normalized; // *.5f
+        impactEffect.transform.position = target.position + dir.normalized * 0.5f; // *.5f
         impactEffect.transform.rotation = Quaternion.LookRotation(dir);
 
         /*

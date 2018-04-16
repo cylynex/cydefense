@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour {
     public Text roundsFinal;
     private bool gameEnded = false;
 	
+    void Start() {
+        gameOverUI.SetActive(false);
+    }
+
 	void Update () {
         if (gameEnded) return;
 
@@ -35,10 +39,15 @@ public class GameManager : MonoBehaviour {
 
     public void Retry() {
         Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene);
+        string scenename = scene.name.ToString();
+        SceneManager.LoadScene(scenename);
     }
 
     public void Menu() {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void TEE() {
+        SceneManager.LoadScene("TEE");
     }
 }

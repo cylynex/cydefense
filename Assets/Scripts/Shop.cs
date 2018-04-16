@@ -13,6 +13,7 @@ public class Shop : MonoBehaviour {
 
     public void SelectBlaster() {
         //buildManager.SetTurretToBuild(buildManager.turretPrefabs[0]);
+        Debug.Log("pick blaster");
         buildManager.SetTurretToBuild(turrets[0]);
     }
 

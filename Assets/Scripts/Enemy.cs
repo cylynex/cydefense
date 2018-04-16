@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class Enemy : MonoBehaviour {
     public float startHitPoints = 100f;
     public float hitPoints;
     public int moneyGain = 10;
+    public Slider hpBar;
 
     public GameObject deathEffect;
 
@@ -79,6 +81,22 @@ public class Enemy : MonoBehaviour {
         if (hitPoints <= 0) {
             Die();
         }
+
+        // Get % hp remaining
+        float percentHitPoints = (hitPoints / startHitPoints);
+        Debug.Log("percent hp left is : " + percentHitPoints);
+
+        // Update HP bar
+        Transform[] kids = GetComponentsInChildren<Transform>();
+        foreach (Transform childElement in kids) {
+            if (childElement.tag == "hpbar") {
+                Debug.Log("Found the HP bar");
+                Vector3 currentScale = GetComponent<Transform>().localScale;
+                Debug.Log("current scale: " + currentScale);
+                //childElement.transform.localScale
+            }
+        }
+
     }
 
 
