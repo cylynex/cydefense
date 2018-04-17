@@ -341,8 +341,8 @@
     <Compile Include="Assets\Scripts\Utility.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
-    <Compile Include="Assets\Turrets\Blaster Level 1\Blaster.cs" />
-    <Compile Include="Assets\Turrets\Blaster Level 1\BlasterBullet.cs" />
+    <Compile Include="Assets\Turrets\Blaster\Blaster.cs" />
+    <Compile Include="Assets\Turrets\Blaster\BlasterBullet.cs" />
     <Compile Include="Assets\Turrets\Laser\Laser.cs" />
     <Compile Include="Assets\Turrets\Rocket Launcher 1\Missile1.cs" />
     <Compile Include="Assets\Turrets\Rocket Launcher 1\RocketLauncher.cs" />

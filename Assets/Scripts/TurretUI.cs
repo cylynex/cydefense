@@ -27,4 +27,11 @@ public class TurretUI : MonoBehaviour {
         popupUI.SetActive(false);
     }
 
+
+    public void Upgrade() {
+        Debug.Log("upgrade turret");
+        target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
 }

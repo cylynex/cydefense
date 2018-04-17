@@ -12,8 +12,12 @@ public class Node : MonoBehaviour {
 
     private Renderer rend;
     private Color startColor;
+
     [Header("Optional")]
     public GameObject turret;
+    public TurretBlueprint turretBluePrint;
+    public bool isUpgraded = false;
+
 
     BuildManager buildManager;
 
@@ -98,5 +102,30 @@ public class Node : MonoBehaviour {
         GameObject be = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(be, 2.0f);
         turret = tempTurret;
+        turretBluePrint = blueprint;
+    }
+
+
+    // Upgrade the turret
+    public void UpgradeTurret() {
+        if (PlayerStats.money < turretBluePrint.upgradeCost) {
+            // Not enough money to upgrade that turret
+            Debug.Log("insufficient funds to upgrade");
+            return;
+        }
+
+        // Have enough money - ok to upgrade
+        PlayerStats.money -= turretBluePrint.upgradeCost;
+
+        // Destroy current turret
+        Destroy(turret);
+
+        // Instantiate upgraded version of turret
+        GameObject tempTurret = (GameObject)Instantiate(turretBluePrint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        GameObject be = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(be, 2.0f);
+        turret = tempTurret;
+
+        isUpgraded = true;
     }
 }

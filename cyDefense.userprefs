@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Node.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Turrets/Rocket Launcher 1/Missile1.cs">
     <Files>
-      <File FileName="Assets/Scripts/Node.cs" Line="75" Column="30" NotebookId="1" />
+      <File FileName="Assets/Scripts/Node.cs" Line="109" Column="30" NotebookId="1" />
       <File FileName="Assets/Scripts/Shop.cs" Line="16" Column="9" NotebookId="1" />
       <File FileName="Assets/Scripts/WaveSpawner.cs" Line="30" Column="20" NotebookId="1" />
       <File FileName="Assets/Scripts/PlayerStats.cs" Line="48" Column="26" NotebookId="1" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="80" Column="44" NotebookId="1" />
-      <File FileName="Assets/Scripts/TurretUI.cs" Line="26" Column="24" NotebookId="1" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="84" Column="5" NotebookId="1" />
+      <File FileName="Assets/Scripts/TurretUI.cs" Line="32" Column="37" NotebookId="1" />
+      <File FileName="Assets/Scripts/TurretBlueprint.cs" Line="17" Column="1" NotebookId="1" />
     </Files>
     <FloatingWindows>
       <FloatingWindow WindowId="1" X="2763" Y="51" Width="1033" Height="1459">
         <Files>
-          <File FileName="Assets/Turrets/Blaster Level 1/BlasterBullet.cs" Line="54" Column="12" />
-          <File FileName="Assets/Turrets/Blaster Level 1/Blaster.cs" Line="57" Column="49" />
           <File FileName="Assets/Turrets/Rocket Launcher 1/Missile1.cs" Line="44" Column="23" />
         </Files>
       </FloatingWindow>
