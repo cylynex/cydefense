@@ -4629,6 +4629,46 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 224486367134744448, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486367134744448, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486367134744448, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486367134744448, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 224491126328313884, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224491126328313884, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224491126328313884, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 165
+      objectReference: {fileID: 0}
+    - target: {fileID: 224491126328313884, guid: 80abcf8d193924445a626a9ddeb9e74d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80abcf8d193924445a626a9ddeb9e74d, type: 2}
   m_IsPrefabParent: 0
@@ -10601,6 +10641,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4971786153149088, guid: 594aff5617ed94c0f9d38f8efb419be5,
     type: 2}
   m_PrefabInternal: {fileID: 1441832336}
+--- !u!1 &1443054127 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1213687257344198, guid: 80abcf8d193924445a626a9ddeb9e74d,
+    type: 2}
+  m_PrefabInternal: {fileID: 697345340}
+--- !u!114 &1443054128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443054127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a6a3de33b6d48d3ad0a556de5b91de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1443564138
 Prefab:
   m_ObjectHideFlags: 0
@@ -13261,6 +13317,7 @@ MonoBehaviour:
   turretToBuild:
     prefab: {fileID: 0}
     cost: 0
+  turretUI: {fileID: 1443054128}
 --- !u!114 &1734748599
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -84,15 +84,17 @@ public class Enemy : MonoBehaviour {
 
         // Get % hp remaining
         float percentHitPoints = (hitPoints / startHitPoints);
-        Debug.Log("percent hp left is : " + percentHitPoints);
+        //Debug.Log("percent hp left is : " + percentHitPoints);
 
         // Update HP bar
         Transform[] kids = GetComponentsInChildren<Transform>();
         foreach (Transform childElement in kids) {
             if (childElement.tag == "hpbar") {
+                /*
                 Debug.Log("Found the HP bar");
                 Vector3 currentScale = GetComponent<Transform>().localScale;
                 Debug.Log("current scale: " + currentScale);
+                */
                 //childElement.transform.localScale
             }
         }

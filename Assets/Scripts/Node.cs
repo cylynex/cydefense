@@ -26,14 +26,16 @@ public class Node : MonoBehaviour {
 
 	// hover animation
     void OnMouseEnter() {
-        Debug.Log("nouseover");
         if (EventSystem.current.IsPointerOverGameObject()) {
             // Already a GO there.
             return;
         }
 
-        if (!buildManager.CanBuild)
+        if (buildManager.CanBuild == false) {
+            Debug.Log("space already occupied cant build here");
             return;
+        }
+
 
         if (PlayerStats.money < buildManager.turretToBuild.cost) {
             rend.material.color = hoverColorBad;
@@ -55,11 +57,16 @@ public class Node : MonoBehaviour {
 
         if (!buildManager.CanBuild)
             return;
-
+        
         if (turret != null) {
             // Turret is already there
+            Debug.Log("already a turret");
+            buildManager.SelectNode(this);
             return;
         }
+
+        if (!buildManager.CanBuild)
+            return;
 
         // Build a Turret
         buildManager.BuildTurretOn(this);

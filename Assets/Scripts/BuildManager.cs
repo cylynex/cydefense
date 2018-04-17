@@ -12,6 +12,10 @@ public class BuildManager : MonoBehaviour {
     public static BuildManager instance;
 
     public TurretBlueprint turretToBuild;
+    private Node selectedNode;
+
+    // The Turret UI class
+    public TurretUI turretUI;
 
     // Setup singleton
     void Awake() {
@@ -31,10 +35,6 @@ public class BuildManager : MonoBehaviour {
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.money >= turretToBuild.cost; } }
 
-    public void SetTurretToBuild(TurretBlueprint turretBP) {
-        turretToBuild = turretBP;
-    }
-
 
     public void BuildTurretOn(Node node) {
         //Instantiate(turretToBuild.prefab, node.transform.position + node.positionOffset, node.transform.rotation);
@@ -52,5 +52,20 @@ public class BuildManager : MonoBehaviour {
         Destroy(be, 2.0f);
         node.turret = turret;
     }
+
+    public void SelectNode(Node node) {
+        Debug.Log("Selected a node to work on");
+        selectedNode = node;
+        turretToBuild = null;
+
+        // display the upgrade window
+        turretUI.SetTarget(node);
+    }
+
+    public void SetTurretToBuild(TurretBlueprint turretBP) {
+        turretToBuild = turretBP;
+        selectedNode = null;
+    }
+
 
 }
