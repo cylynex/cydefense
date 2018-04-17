@@ -51,7 +51,7 @@ public class BlasterBullet : MonoBehaviour {
     void Damage(Transform enemy) {
         Enemy e = enemy.GetComponent<Enemy>();
         e.TakeDamage(damage);
-        Debug.Log("enemy: " + e);
+        // Debug.Log("enemy: " + e);
     }
 
 }

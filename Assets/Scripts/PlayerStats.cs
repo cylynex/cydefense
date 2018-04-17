@@ -46,7 +46,6 @@ public class PlayerStats : MonoBehaviour {
 
         // check for life 0
         if (lives <= 0) {
-            Debug.Log("game over");
             lives = 0;
         }
 

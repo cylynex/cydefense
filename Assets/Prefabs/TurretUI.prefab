@@ -73,6 +73,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4335904267474754}
+  - component: {fileID: 114732800043881058}
   m_Layer: 0
   m_Name: TurretUI
   m_TagString: Untagged
@@ -357,6 +358,18 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &114732800043881058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213687257344198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a6a3de33b6d48d3ad0a556de5b91de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupUI: {fileID: 1867456910153198}
 --- !u!114 &114769872237156438
 MonoBehaviour:
   m_ObjectHideFlags: 1

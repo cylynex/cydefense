@@ -32,7 +32,7 @@ public class Node : MonoBehaviour {
         }
 
         if (buildManager.CanBuild == false) {
-            Debug.Log("space already occupied cant build here");
+            // Debug.Log("space already occupied cant build here");
             return;
         }
 
@@ -52,12 +52,13 @@ public class Node : MonoBehaviour {
 
     // Click node
     void OnMouseDown() {
+
+        buildManager.DeselectNode();
+
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!buildManager.CanBuild)
-            return;
-        
+
         if (turret != null) {
             // Turret is already there
             Debug.Log("already a turret");
@@ -65,8 +66,10 @@ public class Node : MonoBehaviour {
             return;
         }
 
+
         if (!buildManager.CanBuild)
             return;
+
 
         // Build a Turret
         buildManager.BuildTurretOn(this);

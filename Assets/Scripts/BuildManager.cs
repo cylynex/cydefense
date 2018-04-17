@@ -38,10 +38,9 @@ public class BuildManager : MonoBehaviour {
 
     public void BuildTurretOn(Node node) {
         //Instantiate(turretToBuild.prefab, node.transform.position + node.positionOffset, node.transform.rotation);
-        Debug.Log("player has this much money: " + PlayerStats.money);
 
         if (PlayerStats.money < turretToBuild.cost) {
-            Debug.Log("Not enough money to buy that turret");
+            // Not enough money to buy that turret
             return;
         }
 
@@ -54,18 +53,33 @@ public class BuildManager : MonoBehaviour {
     }
 
     public void SelectNode(Node node) {
-        Debug.Log("Selected a node to work on");
+
+        // hide UI if already there
+        if (selectedNode == node) {
+            DeselectNode();
+            return;
+        }
+
+
+        // Selected a node to work on
         selectedNode = node;
         turretToBuild = null;
 
         // display the upgrade window
         turretUI.SetTarget(node);
+
     }
 
     public void SetTurretToBuild(TurretBlueprint turretBP) {
         turretToBuild = turretBP;
-        selectedNode = null;
+        DeselectNode();
     }
 
+
+    // Unselect node and hide the upgrade UI
+    public void DeselectNode() {
+        selectedNode = null;
+        turretUI.Hide();
+    }
 
 }
