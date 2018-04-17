@@ -36,6 +36,7 @@ public class BuildManager : MonoBehaviour {
     public bool HasMoney { get { return PlayerStats.money >= turretToBuild.cost; } }
 
 
+    // Deprecated function for turret building.  Working code is now right in node.
     public void BuildTurretOn(Node node) {
         //Instantiate(turretToBuild.prefab, node.transform.position + node.positionOffset, node.transform.rotation);
 
@@ -73,6 +74,11 @@ public class BuildManager : MonoBehaviour {
     public void SetTurretToBuild(TurretBlueprint turretBP) {
         turretToBuild = turretBP;
         DeselectNode();
+    }
+
+
+    public TurretBlueprint GetTurretToBuild() {
+        return turretToBuild;
     }
 
 

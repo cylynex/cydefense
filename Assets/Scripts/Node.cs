@@ -72,12 +72,31 @@ public class Node : MonoBehaviour {
 
 
         // Build a Turret
-        buildManager.BuildTurretOn(this);
+        BuildTurret(buildManager.GetTurretToBuild());
+
+        // Old build call using build manager
+        //buildManager.BuildTurretOn(this);
 
     }
 
 
     public Vector3 GetBuildPosition() {
         return transform.position + positionOffset;
+    }
+
+
+    // Relocated build stuff from buildmanager
+    void BuildTurret(TurretBlueprint blueprint) {
+        if (PlayerStats.money < blueprint.cost) {
+            // Not enough money to buy that turret
+            return;
+        }
+
+        // Have enough money - ok to build.
+        PlayerStats.money -= blueprint.cost;
+        GameObject tempTurret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        GameObject be = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(be, 2.0f);
+        turret = tempTurret;
     }
 }
