@@ -142,6 +142,7 @@ public class Node : MonoBehaviour {
         // Destroy the turret
         Destroy(turret);
         isUpgraded = false;
+        turretBluePrint = null;
 
     }
 }
