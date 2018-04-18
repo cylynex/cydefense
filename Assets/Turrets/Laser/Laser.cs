@@ -160,7 +160,7 @@ public class Laser : MonoBehaviour {
 
     // Multiple Target Effect
     void LaserMultipleTarget(Transform target) {
-        Debug.Log("hitting many now but doing nothing yet cause no script");
+        Debug.Log("hitting many now");
 
         Collider[] colliders = Physics.OverlapSphere(target.transform.position, aeRadius);
         foreach (Collider collider in colliders) {
