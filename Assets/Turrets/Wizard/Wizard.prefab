@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537613870737702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.874, y: 1.5, z: 9.467}
+  m_LocalPosition: {x: -19.93, y: 1.5, z: 45.01}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4518803747816760}
@@ -184,10 +184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 30
-  fireRate: 10
+  fireRate: 0.5
   turnSpeed: 5
   enemyTag: Enemy
-  fireballPrefab: {fileID: 1039142080057248, guid: 007c6c0cf6c374d99952135b1b6d80d5,
+  fireballPrefab: {fileID: 1816026338359824, guid: 84fb03e0a122b4b5b94e0ab3b20fd88f,
     type: 2}
   firePoint: {fileID: 4973970394997752}
   partToRotate: {fileID: 4604905449938014}

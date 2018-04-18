@@ -8154,11 +8154,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114229560431290808, guid: 456c6a454c3384932a2c6f87ecff0dc5,
-        type: 2}
-      propertyPath: fireRate
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 456c6a454c3384932a2c6f87ecff0dc5, type: 2}
   m_IsPrefabParent: 0
@@ -14366,7 +14361,7 @@ Prefab:
     - target: {fileID: 224581930832885136, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -14386,7 +14381,7 @@ Prefab:
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -14406,7 +14401,7 @@ Prefab:
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     - target: {fileID: 224519537969901816, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}

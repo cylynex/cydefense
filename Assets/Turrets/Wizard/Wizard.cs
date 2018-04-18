@@ -88,10 +88,10 @@ public class Wizard : MonoBehaviour {
 
 
     void Shoot() {
-        GameObject bulletGO = (GameObject)Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
-        Missile1 bullet = bulletGO.GetComponent<Missile1>();
-        if (bullet != null) {
-            bullet.Seek(target);
+        GameObject fireballGO = (GameObject)Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+        Fireball fireball = fireballGO.GetComponent<Fireball>();
+        if (fireball != null) {
+            fireball.Seek(target);
         }
     }
 }
