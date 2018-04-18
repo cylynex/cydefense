@@ -17,7 +17,7 @@ public class Fireball : MonoBehaviour {
         if (target == null) {
             Destroy(gameObject);
             return;
-        }
+        } 
 
         // Make it mooooove
         Vector3 direction = target.position - transform.position;
