@@ -13594,7 +13594,7 @@ Prefab:
     - target: {fileID: 224581930832885136, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -13614,7 +13614,7 @@ Prefab:
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -13634,7 +13634,7 @@ Prefab:
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.800003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 630cd7c8703484641a2f0f58d533b6d5, type: 2}
@@ -13902,9 +13902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e152bd9a7b64bf0bc4cf56459f7602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 500
+  startMoney: 1500
   moneyText: {fileID: 1994622169}
-  startLives: 1
+  startLives: 20
   livesUI: {fileID: 788454911}
   livesUIObject: {fileID: 788454908}
 --- !u!114 &1734748598

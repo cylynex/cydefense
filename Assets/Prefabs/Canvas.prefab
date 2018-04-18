@@ -1571,7 +1571,8 @@ MonoBehaviour:
     upgradeCost: 250
   - turretName: Slooow Doooown
     prefab: {fileID: 1338755472289416, guid: 61ea532f766744647b4e3cba18eef0e7, type: 2}
-    upgradedPrefab: {fileID: 0}
+    upgradedPrefab: {fileID: 1338755472289416, guid: db0c9989c9ab4423b8b56c65e8b50e2d,
+      type: 2}
     cost: 250
     upgradeCost: 400
 --- !u!114 &114665844991257502
