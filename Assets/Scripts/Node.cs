@@ -56,12 +56,11 @@ public class Node : MonoBehaviour {
 
     // Click node
     void OnMouseDown() {
-
-        buildManager.DeselectNode();
-
+        
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-
+        
+        buildManager.DeselectNode();
 
         if (turret != null) {
             // Turret is already there

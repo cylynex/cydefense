@@ -344,8 +344,8 @@
     <Compile Include="Assets\Turrets\Blaster\Blaster.cs" />
     <Compile Include="Assets\Turrets\Blaster\BlasterBullet.cs" />
     <Compile Include="Assets\Turrets\Laser\Laser.cs" />
-    <Compile Include="Assets\Turrets\Rocket Launcher 1\Missile1.cs" />
-    <Compile Include="Assets\Turrets\Rocket Launcher 1\RocketLauncher.cs" />
+    <Compile Include="Assets\Turrets\Rocket Launcher\Missile1.cs" />
+    <Compile Include="Assets\Turrets\Rocket Launcher\RocketLauncher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

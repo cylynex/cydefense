@@ -1,21 +1,13 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Turrets/Rocket Launcher 1/Missile1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Node.cs" Line="109" Column="30" NotebookId="1" />
-      <File FileName="Assets/Scripts/Shop.cs" Line="16" Column="9" NotebookId="1" />
-      <File FileName="Assets/Scripts/WaveSpawner.cs" Line="30" Column="20" NotebookId="1" />
-      <File FileName="Assets/Scripts/PlayerStats.cs" Line="48" Column="26" NotebookId="1" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="84" Column="5" NotebookId="1" />
-      <File FileName="Assets/Scripts/TurretUI.cs" Line="32" Column="37" NotebookId="1" />
-      <File FileName="Assets/Scripts/TurretBlueprint.cs" Line="17" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Node.cs" Line="62" Column="59" />
+      <File FileName="Assets/Scripts/Shop.cs" Line="16" Column="9" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="69" Column="38" />
+      <File FileName="Assets/Scripts/TurretUI.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/TurretBlueprint.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="43" Column="32" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="2763" Y="51" Width="1033" Height="1459">
-        <Files>
-          <File FileName="Assets/Turrets/Rocket Launcher 1/Missile1.cs" Line="44" Column="23" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

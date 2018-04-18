@@ -1557,16 +1557,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turrets:
-  - prefab: {fileID: 1528830166416024, guid: 106c7f949c6e2453aacc3ce68bb80617, type: 2}
+  - turretName: Basic Bitch Blaster
+    prefab: {fileID: 1528830166416024, guid: 106c7f949c6e2453aacc3ce68bb80617, type: 2}
     upgradedPrefab: {fileID: 1528830166416024, guid: 8e4b420e69a534b2d80c3afdc0ff2317,
       type: 2}
     cost: 50
-    upgradeCost: 100
-  - prefab: {fileID: 1315376284794174, guid: 1035b8f1d25bb4b979a8d5bed683d62e, type: 2}
-    upgradedPrefab: {fileID: 0}
+    upgradeCost: 110
+  - turretName: Missile Launcher
+    prefab: {fileID: 1315376284794174, guid: 1035b8f1d25bb4b979a8d5bed683d62e, type: 2}
+    upgradedPrefab: {fileID: 1315376284794174, guid: 6ea494d9bd7e24957aa956d452a9e9b4,
+      type: 2}
     cost: 150
     upgradeCost: 250
-  - prefab: {fileID: 1338755472289416, guid: 61ea532f766744647b4e3cba18eef0e7, type: 2}
+  - turretName: Slooow Doooown
+    prefab: {fileID: 1338755472289416, guid: 61ea532f766744647b4e3cba18eef0e7, type: 2}
     upgradedPrefab: {fileID: 0}
     cost: 250
     upgradeCost: 400

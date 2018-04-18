@@ -54,7 +54,7 @@ public class BuildManager : MonoBehaviour {
     }
 
     public void SelectNode(Node node) {
-
+        Debug.Log("selecting node");
         // hide UI if already there
         if (selectedNode == node) {
             DeselectNode();
@@ -73,6 +73,7 @@ public class BuildManager : MonoBehaviour {
 
     public void SetTurretToBuild(TurretBlueprint turretBP) {
         turretToBuild = turretBP;
+        Debug.Log("deselect node 2");
         DeselectNode();
     }
 
@@ -84,6 +85,7 @@ public class BuildManager : MonoBehaviour {
 
     // Unselect node and hide the upgrade UI
     public void DeselectNode() {
+        Debug.Log("deselect node 1");
         selectedNode = null;
         turretUI.Hide();
     }
