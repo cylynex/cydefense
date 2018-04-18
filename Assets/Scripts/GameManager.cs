@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public GameObject gameOverUI;
+    public GameObject pauseUI;
     public Text roundsFinal;
     private bool gameEnded = false;
 	
@@ -50,5 +51,21 @@ public class GameManager : MonoBehaviour {
 
     public void TEE() {
         SceneManager.LoadScene("TEE");
+    }
+
+
+    public void Pause() {
+        Time.timeScale = 0f;
+        pauseUI.SetActive(true);
+    }
+
+
+    public void SpeedNormal() {
+        Time.timeScale = 1f;
+        pauseUI.SetActive(false);
+    }
+
+    public void SpeedDouble() {
+        Time.timeScale = 2f;
     }
 }

@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 223421591094959504}
   - component: {fileID: 114003367335810394}
   - component: {fileID: 114422568078796308}
+  - component: {fileID: 114796631731493302}
   m_Layer: 5
   m_Name: HP Container
   m_TagString: Untagged
@@ -915,6 +916,19 @@ MonoBehaviour:
   deathEffect: {fileID: 1903933302884204, guid: c9c6bbd5eb2cb40f29996b9b4d057179,
     type: 2}
   hpBar: {fileID: 114465290093785752}
+--- !u!114 &114796631731493302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580857261766514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4669d0aabdf0a45078abb220e2e0a2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToLookAt: {fileID: 0}
+  lockOn: {fileID: 0}
 --- !u!222 &222507988560717062
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class Laser : MonoBehaviour {
     public ParticleSystem impactEffect;
     public int damageOverTime = 5;
     public float slowAmount = 0.5f;
+    public float aeRadius = 0f;
 
     private float fireCountDown = 0f;
 
@@ -107,11 +108,13 @@ public class Laser : MonoBehaviour {
 
     void Shoot() {
 
-        // Do the actual work
-        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        // Determine if its AE or not and act appropriately
+        if (aeRadius > 0f) {
+            LaserMultipleTarget(target);
+        } else {
+            LaserSingleTarget(); 
+        }
 
-        // Do a slow
-        targetEnemy.Slow(slowAmount);
 
         // Do a Heal
         //Heal();
@@ -141,6 +144,36 @@ public class Laser : MonoBehaviour {
             bullet.Seek(target);
         }
         */
+    }
+
+
+    // Single Target Laser Effect
+    void LaserSingleTarget() {
+        
+        // Do the actual work
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+
+        // Do a slow
+        targetEnemy.Slow(slowAmount);
+    }
+
+
+    // Multiple Target Effect
+    void LaserMultipleTarget(Transform target) {
+        Debug.Log("hitting many now but doing nothing yet cause no script");
+
+        Collider[] colliders = Physics.OverlapSphere(target.transform.position, aeRadius);
+        foreach (Collider collider in colliders) {
+            if (collider.tag == "Enemy") {
+                // Its an enemy - dmg it
+                Debug.Log("found an enemy");
+                targetEnemy = collider.GetComponent<Enemy>();
+                LaserSingleTarget();
+            } else {
+                // Not an enemy
+            }
+        }
+
     }
 
     // Heal Enemy
