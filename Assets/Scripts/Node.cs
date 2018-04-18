@@ -127,4 +127,21 @@ public class Node : MonoBehaviour {
 
         isUpgraded = true;
     }
+
+
+    // Sell the Turret
+    public void SellTurret() {
+
+        // Give player the money
+        PlayerStats.money += turretBluePrint.sellValue;
+
+        // Effect (using be for now)
+        GameObject destroyEffect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(destroyEffect, 2.0f);
+
+        // Destroy the turret
+        Destroy(turret);
+        isUpgraded = false;
+
+    }
 }

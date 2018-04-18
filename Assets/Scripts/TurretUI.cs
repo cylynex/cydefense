@@ -55,10 +55,14 @@ public class TurretUI : MonoBehaviour {
 
 
     public void Upgrade() {
-        Debug.Log("upgrade turret");
         target.UpgradeTurret();
         BuildManager.instance.DeselectNode();
+    }
 
+
+    public void Sell() {
+        target.SellTurret();
+        BuildManager.instance.DeselectNode();
     }
 
 }
