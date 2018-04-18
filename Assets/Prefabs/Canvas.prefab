@@ -1563,18 +1563,21 @@ MonoBehaviour:
       type: 2}
     cost: 50
     upgradeCost: 110
+    sellValue: 20
   - turretName: Missile Launcher
     prefab: {fileID: 1315376284794174, guid: 1035b8f1d25bb4b979a8d5bed683d62e, type: 2}
     upgradedPrefab: {fileID: 1315376284794174, guid: 6ea494d9bd7e24957aa956d452a9e9b4,
       type: 2}
     cost: 150
     upgradeCost: 250
+    sellValue: 50
   - turretName: Slooow Doooown
     prefab: {fileID: 1338755472289416, guid: 61ea532f766744647b4e3cba18eef0e7, type: 2}
     upgradedPrefab: {fileID: 1338755472289416, guid: db0c9989c9ab4423b8b56c65e8b50e2d,
       type: 2}
     cost: 250
     upgradeCost: 400
+    sellValue: 150
 --- !u!114 &114665844991257502
 MonoBehaviour:
   m_ObjectHideFlags: 1

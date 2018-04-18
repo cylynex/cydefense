@@ -9,6 +9,7 @@ public class TurretUI : MonoBehaviour {
     public Text upgradeCost;
     public Button upgradeButton;
     public Text turretNameLevel;
+    public Text turretSellValue;
 
     private Node target;
 
@@ -26,6 +27,10 @@ public class TurretUI : MonoBehaviour {
         } else {
             turretName += "Level 2";
         }
+
+        // Set the sell values
+        string sellValue = incomingTarget.turretBluePrint.sellValue.ToString();
+        turretSellValue.text = sellValue;
 
         turretNameLevel.text = turretName;
 

@@ -13,6 +13,8 @@ public class TurretBlueprint {
     public int cost;
     public int upgradeCost;
 
+    public int sellValue;
+
 
 
 }

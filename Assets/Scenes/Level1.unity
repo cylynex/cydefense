@@ -11300,6 +11300,7 @@ MonoBehaviour:
   upgradeCost: {fileID: 2139657797}
   upgradeButton: {fileID: 996958438}
   turretNameLevel: {fileID: 1647470663}
+  turretSellValue: {fileID: 1587322858}
 --- !u!114 &1443054129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13594,7 +13595,7 @@ Prefab:
     - target: {fileID: 224581930832885136, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -13614,7 +13615,7 @@ Prefab:
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -13634,7 +13635,7 @@ Prefab:
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 630cd7c8703484641a2f0f58d533b6d5, type: 2}
@@ -13927,6 +13928,7 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 0}
     cost: 0
     upgradeCost: 0
+    sellValue: 0
   turretUI: {fileID: 1443054128}
 --- !u!114 &1734748599
 MonoBehaviour:
