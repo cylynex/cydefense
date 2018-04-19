@@ -1141,7 +1141,7 @@ Transform:
   m_GameObject: {fileID: 1354187845752684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.1375313, y: 0.504, z: -1.027}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4834608327391892}
   - {fileID: 4412828153249890}
@@ -1948,8 +1948,9 @@ MonoBehaviour:
   startHitPoints: 100
   hitPoints: 100
   moneyGain: 20
-  deathEffect: {fileID: 0}
-  hpBar: {fileID: 0}
+  deathEffect: {fileID: 1903933302884204, guid: c9c6bbd5eb2cb40f29996b9b4d057179,
+    type: 2}
+  hpBar: {fileID: 114335700625193984}
 --- !u!137 &137012572084675622
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

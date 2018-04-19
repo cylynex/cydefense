@@ -79,10 +79,10 @@ MonoBehaviour:
       type: 2}
     enemyAmount: 5
     spawnRate: 1
-  - enemyPrefab: {fileID: 1599501181392622, guid: d39f57589e641450cb17d2893749ba75,
+  - enemyPrefab: {fileID: 1354187845752684, guid: 294996360c3e54d198b395ab5dab1b11,
       type: 2}
-    enemyAmount: 5
-    spawnRate: 1
+    enemyAmount: 10
+    spawnRate: 5
   totalWaves: 0
   currentWave: 1
   delayBetweenMobs: 1.5

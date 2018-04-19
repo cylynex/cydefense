@@ -38,6 +38,8 @@ public class WaveSpawner : MonoBehaviour {
     }
 
     void Update() {
+
+        Debug.Log("enemies alive: " + enemiesAlive);
         
         if (enemiesAlive > 0) {
             return;

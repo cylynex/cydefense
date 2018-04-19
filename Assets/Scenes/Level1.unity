@@ -7319,19 +7319,18 @@ Prefab:
       objectReference: {fileID: 502892239}
     - target: {fileID: 114643769943764364, guid: d90ed67b95d554f809e1f7e52f0634db,
         type: 2}
-      propertyPath: waves.Array.data[1].enemyPrefab
-      value: 
-      objectReference: {fileID: 1354187845752684, guid: 294996360c3e54d198b395ab5dab1b11,
-        type: 2}
+      propertyPath: waves.Array.data[0].enemyAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 114643769943764364, guid: d90ed67b95d554f809e1f7e52f0634db,
         type: 2}
-      propertyPath: waves.Array.data[1].enemyAmount
-      value: 10
+      propertyPath: waves.Array.data[0].spawnRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114643769943764364, guid: d90ed67b95d554f809e1f7e52f0634db,
         type: 2}
       propertyPath: waves.Array.data[1].spawnRate
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d90ed67b95d554f809e1f7e52f0634db, type: 2}
