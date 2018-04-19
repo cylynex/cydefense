@@ -65,6 +65,9 @@ public class Enemy : MonoBehaviour {
             // Update lives / check for end (contained)
             playerstats.SubtractLife();
 
+            // Subtract from enemies alive
+            WaveSpawner.enemiesAlive--;
+
             return;
 
         } else {
@@ -102,7 +105,10 @@ public class Enemy : MonoBehaviour {
 
         Destroy(gameObject);
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 2.0f); 
+        Destroy(effect, 2.0f);
+
+        // Update the enemies Killed value in wave spawner
+        WaveSpawner.enemiesAlive--;
 
     }
 }
