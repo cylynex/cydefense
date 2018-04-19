@@ -993,6 +993,7 @@ GameObject:
   - component: {fileID: 158595096}
   - component: {fileID: 158595095}
   - component: {fileID: 158595094}
+  - component: {fileID: 158595098}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -1015,9 +1016,9 @@ RectTransform:
   m_Father: {fileID: 906622648}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 512.00006, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 236.8, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158595094
@@ -1053,7 +1054,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1123,6 +1124,23 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158595092}
+--- !u!95 &158595098
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158595092}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 856d32dc85ece462686753a05db5d7ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &166095712
 Prefab:
   m_ObjectHideFlags: 0
@@ -3164,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &481880754
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8154,6 +8172,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 1537613870737702, guid: 456c6a454c3384932a2c6f87ecff0dc5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 456c6a454c3384932a2c6f87ecff0dc5, type: 2}
   m_IsPrefabParent: 0
@@ -8572,6 +8594,7 @@ GameObject:
   - component: {fileID: 1117451705}
   - component: {fileID: 1117451704}
   - component: {fileID: 1117451703}
+  - component: {fileID: 1117451707}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -8594,9 +8617,9 @@ RectTransform:
   m_Father: {fileID: 906622648}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 773.80005, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 236.8, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117451703
@@ -8632,7 +8655,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8702,6 +8725,23 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117451701}
+--- !u!95 &1117451707
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117451701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 856d32dc85ece462686753a05db5d7ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1117576119
 Prefab:
   m_ObjectHideFlags: 0
@@ -13372,6 +13412,7 @@ GameObject:
   - component: {fileID: 1611441382}
   - component: {fileID: 1611441381}
   - component: {fileID: 1611441380}
+  - component: {fileID: 1611441384}
   m_Layer: 5
   m_Name: Retry Button
   m_TagString: Untagged
@@ -13394,9 +13435,9 @@ RectTransform:
   m_Father: {fileID: 906622648}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250.20001, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 236.8, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1611441380
@@ -13432,7 +13473,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -13502,6 +13543,23 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1611441378}
+--- !u!95 &1611441384
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611441378}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 856d32dc85ece462686753a05db5d7ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1627220643
 Prefab:
   m_ObjectHideFlags: 0
@@ -14361,7 +14419,7 @@ Prefab:
     - target: {fileID: 224581930832885136, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -14381,7 +14439,7 @@ Prefab:
     - target: {fileID: 224204367811840304, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
@@ -14401,7 +14459,7 @@ Prefab:
     - target: {fileID: 224981328841250308, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -38.800003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224519537969901816, guid: 630cd7c8703484641a2f0f58d533b6d5,
         type: 2}
