@@ -1945,7 +1945,7 @@ MonoBehaviour:
   startSpeed: 5
   speed: 1
   turnSpeed: 3
-  startHitPoints: 100
+  startHitPoints: 200
   hitPoints: 100
   moneyGain: 20
   deathEffect: {fileID: 1903933302884204, guid: c9c6bbd5eb2cb40f29996b9b4d057179,

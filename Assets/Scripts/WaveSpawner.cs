@@ -9,7 +9,8 @@ public class WaveSpawner : MonoBehaviour {
     public static int enemiesAlive = 0;
 
     public Transform enemyPrefab;
-    public float timeBetweenWaves = 5.9f;
+    public float timeBetweenWaves;
+    private float baseTimeBetweenWaves = 0f;
     public Transform spawnPoint;
     public Text waveText;
     public GameObject winUI;
@@ -24,6 +25,7 @@ public class WaveSpawner : MonoBehaviour {
     private int waveIndex = 0;
     public int totalWaves;
     public int currentWave = 0;
+    public int enemiesInThisWave = 0;
 
 
     // Time between mob spawns of each wave
@@ -35,14 +37,16 @@ public class WaveSpawner : MonoBehaviour {
         waveIndex = 0;
         totalWaves = waves.Length;
         currentWave = 0;
+        enemiesInThisWave = 0;
     }
 
     void Update() {
 
-        Debug.Log("enemies alive: " + enemiesAlive);
-        
+        //Debug.Log("enemies alive: " + enemiesAlive);
+
+        // Stops counter from advancing till all enemies are dead - disabled
         if (enemiesAlive > 0) {
-            return;
+            //return;
         }
 
         if (countdown <= 0) {
@@ -50,11 +54,12 @@ public class WaveSpawner : MonoBehaviour {
             if (currentWave == totalWaves) {
                 countdown = 0;
                 // done with waves, if enemies are all dead win.
-                if (enemiesAlive == 0) {
+                if (enemiesInThisWave == 0 && enemiesAlive == 0) {
                     winUI.SetActive(true);
                 }
             } else {
                 // only spawn if we have another level to go to
+                countdown = baseTimeBetweenWaves;
                 StartCoroutine(SpawnWave());
                 countdown = timeBetweenWaves;
                 return;
@@ -71,15 +76,19 @@ public class WaveSpawner : MonoBehaviour {
     IEnumerator SpawnWave() {
 
         currentWave++;
-        Debug.Log("Wave Situtation: " + currentWave + "/" + totalWaves);
 
         PlayerStats.round++;
         waveText.text = PlayerStats.round.ToString();
 
         Wave wave = waves[waveIndex];
+        enemiesInThisWave = wave.enemyAmount;
+
+        // Update time between waves
+        timeBetweenWaves = wave.spawnWaveTimer;
 
         for (int i = 0; i < wave.enemyAmount; i++) {
             SpawnEnemy(wave.enemyPrefab);
+            enemiesInThisWave--;
             yield return new WaitForSeconds(1f / wave.spawnRate);
         }
 
