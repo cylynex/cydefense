@@ -15,6 +15,5 @@ public class TurretBlueprint {
 
     public int sellValue;
 
-
-
+    public int hitPoints;
 }
