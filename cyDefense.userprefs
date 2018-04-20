@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{96307B15-DD9B-A1F9-8261-5D6074563B57}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Turrets/Tank/Tank.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Turrets/MeleeDamage.cs">
     <Files>
-      <File FileName="Assets/Scripts/Node.cs" Line="63" Column="30" />
-      <File FileName="Assets/Scripts/TurretBlueprint.cs" Line="19" Column="2" />
-      <File FileName="Assets/Turrets/BaseTurret.cs" Line="5" Column="24" />
-      <File FileName="Assets/Turrets/Tank/Tank.cs" Line="5" Column="31" />
+      <File FileName="Assets/Turrets/Tank/Tank.cs" Line="16" Column="23" />
+      <File FileName="Assets/Turrets/BaseTurret.cs" Line="49" Column="38" />
+      <File FileName="Assets/Turrets/MeleeDamage.cs" Line="23" Column="12" />
+      <File FileName="Assets/Turrets/Tank/TankDamage.cs" Line="8" Column="23" />
+      <File FileName="Assets/Turrets/Rocket Launcher/Missile1.cs" Line="55" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -6033,7 +6033,7 @@ Prefab:
     - target: {fileID: 114643769943764364, guid: d90ed67b95d554f809e1f7e52f0634db,
         type: 2}
       propertyPath: waves.Array.data[1].spawnWaveTimer
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114643769943764364, guid: d90ed67b95d554f809e1f7e52f0634db,
         type: 2}

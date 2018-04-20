@@ -4,51 +4,21 @@ using UnityEngine;
 
 public class BaseTurret : MonoBehaviour {
 
-    private Transform target;
-
-    [Header("Attributes")]
-    public float range = 15f;
-    public float fireRate = 10f;
-    private float fireCountdown = 0f;
+    public Transform target;
 
     [Header("Setup Fields Only")]
-    public float turnSpeed = 10f;
     public string enemyTag = "Enemy";
 
-    public GameObject level1BulletPrefab;
+    [Header("Fire Control")]
+    public GameObject damagePrefab;
     public Transform firePoint;
-
-
-    // rotation part
     public Transform partToRotate;
 
-	void Start () {
-        InvokeRepeating("UpdateTarget", 0f, 1f);
-	}
-
-
-    void Update() {
-        // if no target, just exit
-        if (target == null) {
-            return;
-        }
-
-        // END - SOURCE -> to get the direction we should face and lock target
-        Vector3 directonToFace = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(directonToFace);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-
-        // Fire Control
-        if (fireCountdown <= 0) {
-            Shoot();
-            fireCountdown = 1 / fireRate;
-        }
-
-        fireCountdown -= Time.deltaTime;
-
-    }
-	
+    [Header("Attributes")]
+    public float turnSpeed = 10f;
+    public float range = 15f;
+    public float fireRate = 10f;
+    public float fireCountdown = 0f;
 
     void UpdateTarget() {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -68,10 +38,33 @@ public class BaseTurret : MonoBehaviour {
         if (nearestEnemy != null && shortestDistance <= range)  {
             // set target
             target = nearestEnemy.transform;
-
+            Debug.Log("turret target is " + target);
         } else {
             target = null;
         }
+    }
+
+
+    public void ActiveTrack() {
+        Debug.Log("active tracking");
+        // if no target, just exit
+        if (target == null) {
+            return;
+        }
+
+        // END - SOURCE -> to get the direction we should face and lock target
+        Vector3 directonToFace = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(directonToFace);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        // Fire Control
+        if (fireCountdown <= 0) {
+            Shoot();
+            fireCountdown = 1 / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
     }
 
 
@@ -83,11 +76,13 @@ public class BaseTurret : MonoBehaviour {
 
 
     // SHOOT!
-    void Shoot() {
-        GameObject bulletGO = (GameObject)Instantiate(level1BulletPrefab, firePoint.position, firePoint.rotation);
-        BlasterBullet bullet = bulletGO.GetComponent<BlasterBullet>();
-        if (bullet != null) {
-            bullet.Seek(target);
+    public void Shoot() {
+        GameObject damageGO = (GameObject)Instantiate(damagePrefab, firePoint.position, firePoint.rotation);
+        Debug.Log("created " + damageGO);
+        MeleeDamage dmg = damageGO.GetComponent<MeleeDamage>();
+        if (dmg != null) {
+            Debug.Log("seeking target: " + target);
+            dmg.Seek(target);
         }
     }
 }

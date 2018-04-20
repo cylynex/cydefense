@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlasterBullet : MonoBehaviour {
+public class MeleeDamage : MonoBehaviour {
 
     [Header("Attributes")]
     public float speed = 70f;
@@ -17,10 +17,10 @@ public class BlasterBullet : MonoBehaviour {
         target = _target;
     }
 
-	void Start () {
-	}
-	
-	void Update () {
+    void Start() {
+    }
+
+    public void TrackTarget() {
         if (target == null) {
             Destroy(gameObject);
             return;
@@ -36,21 +36,44 @@ public class BlasterBullet : MonoBehaviour {
 
         // Didnt hit - keep moving
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
-	}
+    }
 
 
     // Hit the target
     void HitTarget() {
         GameObject effectInstance = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectInstance, 2.0f);
+        Destroy(effectInstance, 5.0f);
+
+        // Explosion
+        if (explosionRadius > 0f) {
+            Explode();
+        } else {
+            Damage(target);
+        }
+
         Destroy(gameObject);
-        Damage(target.transform);
+
     }
 
     void Damage(Transform enemy) {
         Enemy e = enemy.GetComponent<Enemy>();
         e.TakeDamage(damage);
         // Debug.Log("enemy: " + e);
+    }
+
+
+    // AE Damage
+    void Explode() {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach (Collider collider in colliders) {
+            if (collider.tag == "Enemy") {
+                // Its an enemy - destroy it
+                Damage(collider.transform);
+            } else {
+                // Not an enemy
+            }
+        }
+
     }
 
 }

@@ -353,6 +353,8 @@
     <Compile Include="Assets\Turrets\Wizard\Wizard.cs" />
     <Compile Include="Assets\Turrets\Tank\Tank.cs" />
     <Compile Include="Assets\Turrets\BaseTurret.cs" />
+    <Compile Include="Assets\Turrets\Tank\TankDamage.cs" />
+    <Compile Include="Assets\Turrets\MeleeDamage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
